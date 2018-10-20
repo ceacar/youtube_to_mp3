@@ -1,3 +1,4 @@
+#!/bin/bash
 export PYTHONPATH=$PYTHONPATH:$PWD
-ls $PWD/youtube_dl || git clone https://github.com/rg3/youtube-dl.git /tmp/
+ls $PWD/youtube_dl || git clone https://github.com/rg3/youtube-dl.git /tmp/youtube-dl
 mv /tmp/youtube-dl/youtube_dl $PWD
