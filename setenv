@@ -1,4 +1,5 @@
 #!/bin/bash
 export PYTHONPATH=$PYTHONPATH:$PWD
-ls $PWD/youtube_dl || git clone https://github.com/rg3/youtube-dl.git /tmp/youtube-dl
-mv /tmp/youtube-dl/youtube_dl $PWD
+apt-get install ffmpeg
+ls $PWD/youtube_dl || git clone https://github.com/rg3/youtube-dl.git $PWD/youtube-dl
+mv $PWD/youtube-dl/youtube_dl $PWD

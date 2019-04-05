@@ -39,6 +39,10 @@ def download_link(youtube_link):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([youtube_link])
 
+def reformat_mobile_link(mobile_youtube_link:'https://youtu.be/YqFHIU4qc-k'):
+    strArray = mobile_youtube_link.split('/')
+    youtube_hash_code = strArray[-1]
+    return "https://www.youtube.com/watch?v={0}".format(youtube_hash_code)
 
 if sys.argv[1] == '-f':
     file_name = sys.argv[2]
@@ -48,6 +52,9 @@ if sys.argv[1] == '-f':
             download_link(link)
 else:
     youtube_link= sys.argv[1]
+    if "youtu.be" in youtube_link:
+        #it is a mobile link
+        youtube_link = reformat_mobile_link(youtube_link)
     download_link(youtube_link)
 
 
