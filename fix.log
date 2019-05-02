@@ -6,3 +6,8 @@ install ffmpeg
 youtube_dl doesn't work, 
 crawled https://github.com/ytdl-org/youtube-dl/issues/18873; 
 ran pip install https://github.com/Khang-NT/youtube-dl/archive/master.zip, solved the issue
+
+
+20190426 ->
+token error
+pip install -U youtube-dl

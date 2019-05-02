@@ -1,0 +1,4 @@
+ #lists the format and video fragment that is downloadable
+ youtube-dl --list-formats https://www.youtube.com/watch?v=9uIk_91GQYI
+ #selects 133 to download,  this --audio-format mp3 seems doesn't work at all, need to verify this
+ youtube-dl -f 133 --audio-format mp3 https://www.youtube.com/watch?v=9uIk_91GQYI
